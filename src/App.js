@@ -4,6 +4,9 @@ import Timer from './Timer';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    background: {
+      default: 'rgb(32,32,32)',
+    },
   },
 });
 

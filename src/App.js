@@ -1,29 +1,19 @@
-import { useEffect, useState } from 'react';
-import Beep from 'browser-beep';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import Timer from './Timer';
 
-const INTERVAL = 120000;
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
-const beep = Beep({ frequency: 830, interval: INTERVAL });
-
-function Timer() {
-  const [time, setTime] = useState(0);
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(Math.max(time - 1, 0));
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [time]);
-
-  function handleClick() {
-    beep(2);
-    setTime(INTERVAL / 1000);
-  }
-
+function App() {
   return (
-    <div onClick={handleClick}>{time}</div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <Timer />
+    </ThemeProvider>
   );
 }
 
-export default Timer;
+export default App;

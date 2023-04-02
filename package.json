@@ -1,6 +1,10 @@
 {
   "homepage": "https://dlackey.github.io/widgets",
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/material": "^5.11.15",
     "browser-beep": "^1.0.2",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",

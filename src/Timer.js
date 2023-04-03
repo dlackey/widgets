@@ -25,7 +25,7 @@ function Timer() {
 
   return (
     <Box onClick={handleClick}>
-      <Typography variant="h1">{text}</Typography>
+      <Typography variant="h2">{text}</Typography>
     </Box>
   );
 }
